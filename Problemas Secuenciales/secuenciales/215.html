@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Problema 2.15</title>
+    <style>
+        body { font-family: sans-serif; background: #f4f4f4; text-align: center; padding: 20px; }
+        .container { background: white; padding: 30px; border-radius: 10px; max-width: 400px; margin: auto; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        header { display: flex; justify-content: space-between; background: #333; color: white; padding: 10px; border-radius: 5px; margin-bottom: 20px; }
+        input { width: 90%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
+        button { padding: 10px 20px; cursor: pointer; background: #28a745; color: white; border: none; border-radius: 5px; width: 100%; margin-top: 10px; }
+        .btn-next { background: #007bff; margin-top: 20px; }
+        #res { margin-top: 20px; font-weight: bold; color: blue; }
+    </style>
+</head>
+<body>
+    <header>
+        <span>ANA CONTRERAS</span>
+        <a href="../index.html" style="color:white; text-decoration:none;">🏠</a>
+    </header>
+    <div class="container">
+        <h2>2.15 Potencia Eléctrica</h2>
+        <input type="number" id="v" placeholder="Voltaje (V)">
+        <input type="number" id="i" placeholder="Intensidad (I)">
+        <button onclick="calcular()">Calcular Potencia</button>
+        <div id="res"></div>
+        <button class="btn-next" onclick="location.href='216.html'">Siguiente Problema</button>
+    </div>
+
+    <script>
+        function calcular() {
+            let v = parseFloat(document.getElementById('v').value);
+            let i = parseFloat(document.getElementById('i').value);
+            document.getElementById('res').innerText = "Potencia: " + (v * i) + " Watts";
+        }
+    </script>
+</body>
+</html>

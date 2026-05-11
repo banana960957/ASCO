@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Problema 2.14</title>
+    <style>
+        body { font-family: sans-serif; background: #f4f4f4; text-align: center; padding: 20px; }
+        .container { background: white; padding: 30px; border-radius: 10px; max-width: 400px; margin: auto; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        header { display: flex; justify-content: space-between; background: #333; color: white; padding: 10px; border-radius: 5px; margin-bottom: 20px; }
+        input { width: 90%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
+        button { padding: 10px 20px; cursor: pointer; background: #28a745; color: white; border: none; border-radius: 5px; width: 100%; margin-top: 10px; }
+        .btn-next { background: #007bff; margin-top: 20px; }
+        #res { margin-top: 20px; font-weight: bold; color: blue; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ANA CONTRERAS</h1>
+        <a href="../index.html" class="home-icon">🏠</a>
+    </header>
+    <div class="container">
+        <h2>2.14 Cheque de Viaje</h2>
+        <input type="number" id="d" placeholder="Días de viaje">
+        <input type="number" id="h" placeholder="Hotel diario">
+        <input type="number" id="c" placeholder="Comida diaria">
+        <button onclick="calc()">Calcular Monto</button>
+        <div id="res"></div>
+        <button class="btn-next" onclick="location.href='215.html'">Siguiente Problema</button>
+    </div>
+<script>
+    function calc() {
+        let d = parseInt(document.getElementById('d').value);
+        let h = parseFloat(document.getElementById('h').value) * d;
+        let c = parseFloat(document.getElementById('c').value) * d;
+        let o = 100 * d;
+        document.getElementById('res').innerText = "Hotel: $" + h + "\nComida: $" + c + "\nOtros: $" + o + "\nTotal: $" + (h+c+o);
+    }
+</script>
+</body>
+</html>

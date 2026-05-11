@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Problema 2.18</title>
+    <style>
+        body { font-family: sans-serif; background: #f4f4f4; text-align: center; padding: 20px; }
+        .container { background: white; padding: 30px; border-radius: 10px; max-width: 400px; margin: auto; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        header { display: flex; justify-content: space-between; background: #333; color: white; padding: 10px; border-radius: 5px; margin-bottom: 20px; }
+        input { width: 90%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
+        button { padding: 10px 20px; cursor: pointer; background: #28a745; color: white; border: none; border-radius: 5px; width: 100%; margin-top: 10px; }
+        .btn-next { background: #007bff; margin-top: 20px; }
+        #res { margin-top: 20px; font-weight: bold; color: blue; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ANA CONTRERAS</h1>
+        <a href="../index.html" class="home-icon">🏠</a>
+    </header>
+    <div class="container">
+        <h2>2.18 Tiempo de Vida</h2>
+        <input type="number" id="ed" placeholder="Tu edad en años">
+        <button onclick="calc()">Calcular</button>
+        <div id="res"></div>
+        <button class="btn-next" onclick="location.href='219.html'">Siguiente Problema</button>
+    </div>
+<script>
+    function calc() {
+        let e = parseInt(document.getElementById('ed').value);
+        document.getElementById('res').innerText = (e*12)+" meses, "+(e*365)+" días, "+(e*365*24)+" horas.";
+    }
+</script>
+</body>
+</html>
